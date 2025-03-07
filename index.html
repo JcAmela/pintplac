@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pintplac - Expertos en Pintura y Decoración en Badalona</title>
+  <meta name="description"
+    content="Empresa líder en servicios de pintura profesional en Badalona. Pintura interior, exterior, decorativa y rehabilitación integral. Presupuestos inmediatos.">
+
+  <!-- Preconnect & Preload para optimizar carga de fuentes e iconos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Preload de una de las variantes de la fuente (ejemplo) -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap">
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Carga de FontAwesome & Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap">
+
+  <!-- Open Graph y Twitter Cards -->
+  <meta property="og:title" content="Pintplac - Pintores Profesionales en Badalona">
+  <meta property="og:description"
+    content="Expertos en pintura decorativa y rehabilitación integral de viviendas en Badalona.">
+  <meta property="og:url" content="https://www.pintplac.com">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pintplac - Pintores Profesionales en Badalona">
+  <meta name="twitter:description" content="Transformamos espacios en Badalona con pintura de alta calidad.">
+
+  <!-- Datos estructurados (schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Pintplac",
+    "image": "",
+    "@id": "",
+    "url": "https://www.pintplac.com",
+    "telephone": "+34931234567",
+    "priceRange": "€€",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Carrer de l'Exemple 123",
+      "addressLocality": "Badalona",
+      "postalCode": "08915",
+      "addressCountry": "ES"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 41.4500,
+      "longitude": 2.2474
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "08:00",
+      "closes": "20:00"
+    }
+  }
+  </script>
+
+  <!-- Tailwind + Config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1a365d',
+            secondary: '#e11d48'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Librerías externas -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+
+  <!-- Nuestra hoja de estilos personalizada -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="testimonials.css">
+  <link rel="stylesheet" href="./about-section.css">
+</head>
+
+<body class="antialiased">
+  <!-- Enlace "Saltar al contenido principal" -->
+  <a href="#main-content" class="sr-only focus:not-sr-only">
+    Saltar al contenido principal
+  </a>
+
+  <!-- Cookie Consent -->
+  <div class="cookie-consent bg-primary text-white p-4 fixed bottom-0 w-full z-50 hidden">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
+      <p class="mb-4 md:mb-0 md:mr-4">
+        Utilizamos cookies para mejorar tu experiencia.
+        <a href="politica-cookies.html" class="underline text-white">Más info</a>
+      </p>
+      <button id="accept-cookies" class="bg-white text-primary px-6 py-2 rounded-full">
+        Aceptar
+      </button>
+    </div>
+  </div>
+
+  <!-- WhatsApp Fixed -->
+  <a href="#" target="_blank"
+    class="fixed bottom-6 right-6 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-transform"
+    aria-label="Abrir chat de WhatsApp con Pintplac">
+    <i class="fab fa-whatsapp text-2xl" aria-hidden="true"></i>
+  </a>
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-lg fixed w-full z-40" aria-label="Menú principal">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-20 items-center">
+        <!-- Logo en texto -->
+        <a href="#" class="flex items-center">
+          <span class="text-2xl font-bold text-primary">Pintplac</span>
+        </a>
+
+        <!-- Menú Desktop -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#about-section" class="text-gray-600 hover:text-primary transition-colors">Acerca de</a>
+          <a href="#servicios" class="text-gray-600 hover:text-primary transition-colors">Servicios</a>
+          <a href="#proyectos" class="text-gray-600 hover:text-primary transition-colors">Proyectos</a>
+          <a href="#presupuesto"
+            class="bg-primary text-white px-6 py-2 rounded-full hover:bg-primary-dark transition-colors">
+            Presupuesto Online
+          </a>
+        </div>
+
+        <!-- Mobile Toggle -->
+        <button id="mobile-menu-button" class="md:hidden text-primary" aria-label="Abrir menú móvil">
+          <i class="fas fa-bars text-2xl" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Menú móvil -->
+  <div class="mobile-menu hidden md:hidden 
+         fixed top-20 left-0 w-full 
+         bg-white z-50 shadow-lg 
+         py-4 px-4">
+    <!-- Contenedor interno para centrar -->
+    <div class="flex flex-col items-center gap-2">
+      <a href="#about-section" class="block w-full text-center py-3 
+             text-gray-700 hover:bg-gray-100 
+             transition-colors">
+        Acerca de
+      </a>
+      <a href="#servicios" class="block w-full text-center py-3 
+             text-gray-700 hover:bg-gray-100 
+             transition-colors">
+        Servicios
+      </a>
+      <a href="#proyectos" class="block w-full text-center py-3 
+             text-gray-700 hover:bg-gray-100 
+             transition-colors">
+        Proyectos
+      </a>
+      <a href="#presupuesto" class="block w-full text-center py-3 
+             bg-primary text-white 
+             hover:bg-blue-900 
+             transition-colors 
+             rounded">
+        Presupuesto
+      </a>
+    </div>
+  </div>
+
+
+  <!-- Hero Section -->
+  <section class="hero-gradient text-white pt-40 pb-32 px-4">
+    <div class="max-w-7xl mx-auto text-center">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight" data-aos="fade-up">
+        Transformamos Espacios en <span class="text-secondary">Badalona</span>
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+        Expertos en pintura decorativa y rehabilitación integral de viviendas
+      </p>
+      <div class="flex flex-col md:flex-row justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
+        <a href="tel:931234567"
+          class="bg-secondary text-white px-8 py-4 rounded-full text-lg hover:bg-red-700 transition-colors">
+          <i class="fas fa-phone-volume mr-2" aria-hidden="true"></i>Llamar Ahora
+        </a>
+        <a href="#presupuesto"
+          class="bg-white text-primary px-8 py-4 rounded-full text-lg hover:bg-gray-100 transition-colors">
+          <i class="fas fa-euro-sign mr-2" aria-hidden="true"></i>Presupuesto Gratis
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contenido principal -->
+  <main id="main-content">
+    <!-- Sección Acerca de -->
+    <section id="about-section" class="about-section py-24 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-5xl font-extrabold text-primary mb-6" data-aos="fade-up">Conócenos</h2>
+          <p class="text-lg text-gray-700 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+            Más de una década transformando espacios con creatividad, pasión y calidad. Nuestro equipo de expertos en pintura y decoración garantiza ambientes únicos y duraderos.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-12">
+          <div class="about-card p-10 shadow-lg rounded-xl bg-white text-center" data-aos="fade-up">
+            <div class="flex items-center justify-center w-16 h-16 bg-primary text-white rounded-full mx-auto mb-6">
+              <i class="fas fa-paint-roller text-2xl"></i>
+            </div>
+            <h3 class="text-2xl font-semibold text-primary mb-4">Nuestra Filosofía</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Creemos en la pintura como arte para mejorar la calidad de vida. Aplicamos técnicas modernas y materiales ecológicos para cada proyecto.
+            </p>
+          </div>
+          <div class="about-card p-10 shadow-lg rounded-xl bg-white text-center" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex items-center justify-center w-16 h-16 bg-primary text-white rounded-full mx-auto mb-6">
+              <i class="fas fa-handshake text-2xl"></i>
+            </div>
+            <h3 class="text-2xl font-semibold text-primary mb-4">Nuestros Valores</h3>
+            <ul class="text-gray-600 space-y-3">
+              <li><i class="fas fa-check text-secondary mr-2"></i> Responsabilidad con el cliente</li>
+              <li><i class="fas fa-check text-secondary mr-2"></i> Compromiso con la calidad</li>
+              <li><i class="fas fa-check text-secondary mr-2"></i> Respeto por los plazos</li>
+            </ul>
+          </div>
+          <div class="about-card p-10 shadow-lg rounded-xl bg-white text-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="flex items-center justify-center w-16 h-16 bg-primary text-white rounded-full mx-auto mb-6">
+              <i class="fas fa-users text-2xl"></i>
+            </div>
+            <h3 class="text-2xl font-semibold text-primary mb-4">Equipo Especializado</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Un equipo de profesionales capacitados en las últimas tendencias en pintura y decoración para garantizar resultados impecables.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+<!-- Sección Servicios -->
+<section id="servicios" class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-5xl font-extrabold text-primary mb-6" data-aos="fade-up">Nuestros Servicios</h2>
+      <p class="text-lg text-gray-700 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+        Soluciones de pintura y decoración con la mejor calidad y profesionalismo.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 lg:grid-cols-2">
+      <!-- Servicio 1 -->
+      <div class="service-box hover-zoom bg-white p-6 shadow-lg rounded-lg border-l-4 border-primary flex items-center gap-4" data-aos="fade-up">
+        <div class="w-14 h-14 bg-primary text-white flex items-center justify-center rounded-full">
+          <i class="fas fa-brush text-2xl"></i>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-primary mb-2">Pintura Interior</h3>
+          <p class="text-gray-600 text-sm">Acabados de alta calidad para interiores residenciales y comerciales.</p>
+        </div>
+      </div>
+
+      <!-- Servicio 2 -->
+      <div class="service-box hover-zoom bg-white p-6 shadow-lg rounded-lg border-l-4 border-primary flex items-center gap-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="w-14 h-14 bg-primary text-white flex items-center justify-center rounded-full">
+          <i class="fas fa-home text-2xl"></i>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-primary mb-2">Pintura Exterior</h3>
+          <p class="text-gray-600 text-sm">Protección y estética para fachadas y espacios exteriores.</p>
+        </div>
+      </div>
+
+      <!-- Servicio 3 -->
+      <div class="service-box hover-zoom bg-white p-6 shadow-lg rounded-lg border-l-4 border-primary flex items-center gap-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="w-14 h-14 bg-primary text-white flex items-center justify-center rounded-full">
+          <i class="fas fa-palette text-2xl"></i>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-primary mb-2">Pintura Decorativa</h3>
+          <p class="text-gray-600 text-sm">Murales y técnicas artísticas para un diseño exclusivo.</p>
+        </div>
+      </div>
+
+      <!-- Servicio 4 -->
+      <div class="service-box hover-zoom bg-white p-6 shadow-lg rounded-lg border-l-4 border-primary flex items-center gap-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="w-14 h-14 bg-primary text-white flex items-center justify-center rounded-full">
+          <i class="fas fa-tools text-2xl"></i>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-primary mb-2">Rehabilitación Integral</h3>
+          <p class="text-gray-600 text-sm">Servicios completos para renovar y mejorar cualquier espacio.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+ <!-- Galería Interactiva -->
+ <section id="proyectos" class="py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">Proyectos Destacados</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto mb-8">
+        Descubre algunos ejemplos de nuestros proyectos más recientes y el impacto que pueden tener en tus espacios.
+      </p>
+      
+      <div class="flex justify-center space-x-4 mb-8">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="interior">Interior</button>
+        <button class="filter-btn" data-filter="exterior">Exterior</button>
+        <button class="filter-btn" data-filter="decorativo">Decorativo</button>
+      </div>
+    </div>
+
+    <!-- Galería con imágenes actualizadas -->
+    <div class="gallery grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <a href="https://jl-estudio.es/wp-content/uploads/2023/07/Arquitecto-interiores-Javier-Lopez-proyecto-Aravaca-2-1024x693.jpg" class="gallery-item interior block bg-white rounded-lg shadow hover:scale-105 transition-transform" aria-label="Proyecto interior con espacios modernos y luminosos">
+        <img src="https://jl-estudio.es/wp-content/uploads/2023/07/Arquitecto-interiores-Javier-Lopez-proyecto-Aravaca-2-1024x693.jpg" alt="Vista previa de un proyecto interior moderno" loading="lazy" class="w-full h-48 object-cover rounded-lg" />
+      </a>
+      <a href="https://pinturasodeon.es/tienda/img/leoblog/b/1/44/lg-b-pintar%20fachada.jpg" class="gallery-item exterior block bg-white rounded-lg shadow hover:scale-105 transition-transform" aria-label="Proyecto de pintura exterior en fachada">
+        <img src="https://pinturasodeon.es/tienda/img/leoblog/b/1/44/lg-b-pintar%20fachada.jpg" alt="Fachada exterior con acabado profesional" loading="lazy" class="w-full h-48 object-cover rounded-lg" />
+      </a>
+      <a href="https://www.wallprintvertical.com/wp-content/uploads/2024/10/2150555442-1.jpg" class="gallery-item decorativo block bg-white rounded-lg shadow hover:scale-105 transition-transform" aria-label="Proyecto decorativo con mural artístico">
+        <img src="https://www.wallprintvertical.com/wp-content/uploads/2024/10/2150555442-1.jpg" alt="Decoración mural con técnica artística" loading="lazy" class="w-full h-48 object-cover rounded-lg" />
+      </a>
+      <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzgT_xLMC5SO_pS7SxlOHotPhHXvFbNuvxkA&s" class="gallery-item exterior block bg-white rounded-lg shadow hover:scale-105 transition-transform" aria-label="Proyecto exterior con fachada renovada">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzgT_xLMC5SO_pS7SxlOHotPhHXvFbNuvxkA&s" alt="Vista previa de una fachada exterior renovada" loading="lazy" class="w-full h-48 object-cover rounded-lg" />
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- Testimonios - Carrusel -->
+<section class="py-20 bg-gray-100">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-4xl font-bold mb-6" data-aos="fade-up">Opiniones de Clientes</h2>
+    <div class="swiper mySwiper" data-aos="fade-up" data-aos-delay="100">
+      <div class="swiper-wrapper" id="testimonials-container">
+        <!-- Los testimonios serán cargados dinámicamente -->
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- CTA -->
+    <section class="bg-primary text-white py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="max-w-3xl mx-auto" data-aos="zoom-in">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">¿Listo para Transformar tu Hogar?</h2>
+          <p class="text-xl mb-8">
+            Obtén tu presupuesto personalizado en menos de 24 horas
+          </p>
+          <div class="flex flex-col md:flex-row justify-center gap-4">
+            <a href="#presupuesto"
+              class="bg-secondary text-white px-8 py-4 rounded-full hover:bg-pink-700 transition-colors">
+              Solicitar Presupuesto <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Presupuesto -->
+    <section id="presupuesto" class="py-20 bg-gray-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6" data-aos="fade-up">
+            Solicita tu Presupuesto en Línea
+          </h2>
+          <p class="text-gray-700 max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+            Llena el siguiente formulario con los detalles de tu proyecto y te responderemos con una propuesta
+            detallada.
+          </p>
+        </div>
+
+        <form class="max-w-2xl mx-auto bg-white p-6 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="200">
+          <div class="mb-4">
+            <label for="nombre" class="block text-gray-700 font-semibold mb-2">Nombre</label>
+            <input type="text" id="nombre" name="nombre" class="w-full border border-gray-300 rounded-lg p-3" required>
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block text-gray-700 font-semibold mb-2">Correo Electrónico</label>
+            <input type="email" id="email" name="email" class="w-full border border-gray-300 rounded-lg p-3" required>
+          </div>
+          <div class="mb-4">
+            <label for="telefono" class="block text-gray-700 font-semibold mb-2">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" class="w-full border border-gray-300 rounded-lg p-3">
+          </div>
+          <div class="mb-6">
+            <label for="detalles" class="block text-gray-700 font-semibold mb-2">Detalles del Proyecto</label>
+            <textarea id="detalles" name="detalles" rows="4" class="w-full border border-gray-300 rounded-lg p-3"
+              placeholder="Cuéntanos sobre la superficie, el tipo de pintura deseado y cualquier detalle importante"></textarea>
+          </div>
+          <button type="submit"
+            class="bg-primary text-white font-bold py-3 px-6 rounded-full hover:bg-primary-dark transition-colors w-full">
+            Enviar Solicitud
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white pt-20 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8 mb-12">
+        <!-- Columna 1 -->
+        <div>
+          <h4 class="text-lg font-bold mb-6">Pintplac</h4>
+          <p class="text-gray-400 mb-4">
+            Especialistas en transformación de espacios desde 2008
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white" aria-label="Visitar página de Facebook de Pintplac">
+              <i class="fab fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white" aria-label="Visitar página de Instagram de Pintplac">
+              <i class="fab fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Columna 2 -->
+        <div>
+          <h4 class="text-lg font-bold mb-6">Enlaces Rápidos</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="#acerca" class="hover:text-white">Acerca de</a></li>
+            <li><a href="#servicios" class="hover:text-white">Servicios</a></li>
+            <li><a href="#proyectos" class="hover:text-white">Proyectos</a></li>
+            <li><a href="#presupuesto" class="hover:text-white">Presupuesto</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3 -->
+        <div>
+          <h4 class="text-lg font-bold mb-6">Contacto</h4>
+          <p class="text-gray-400 mb-2">Carrer de l'Exemple 123</p>
+          <p class="text-gray-400 mb-2">08915, Badalona (ES)</p>
+          <p class="text-gray-400 mb-2">Tel: +34 931 234 567</p>
+          <p class="text-gray-400">Email: info@pintplac.com</p>
+        </div>
+
+        <!-- Columna 4 -->
+        <div>
+          <h4 class="text-lg font-bold mb-6">Horarios</h4>
+          <ul class="text-gray-400 space-y-1">
+            <li>Lunes - Viernes: 08:00 - 20:00</li>
+            <li>Sábado y Domingo: Cerrado</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 pt-8 text-center md:text-left">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-gray-400 mb-4 md:mb-0">
+            &copy; 2024 Pintplac. Todos los derechos reservados
+          </p>
+          <div class="flex space-x-6">
+            <a href="politica-privacidad.html" class="text-gray-400 hover:text-white">
+              Privacidad
+            </a>
+            <a href="terminos-servicio.html" class="text-gray-400 hover:text-white">
+              Términos
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts externos -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Nuestro script personalizado -->
+  <script src="scripts.js"></script>
+  <script src="testimonials.js"></script>
+</body>
+
+</html>
