@@ -1,0 +1,68 @@
+/* ===== Estilos mejorados y coherentes para la sección "Acerca de" ===== */
+
+/* Contenedor principal con fondo sutil y coherente con la web */
+#about-section {
+    background-color: #f8fafc;
+    padding: 5rem 0;
+    text-align: center;
+  }
+  
+  /* Título de la sección */
+  #about-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Párrafo descriptivo */
+  #about-section p {
+    font-size: 1.1rem;
+    color: #4a5568;
+    line-height: 1.8;
+    max-width: 750px;
+    margin: 0 auto 2rem;
+  }
+  
+  /* Tarjetas de información con efecto sutil */
+  .about-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Encabezados de las tarjetas */
+  .about-card h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 1rem;
+  }
+  
+  /* Listas dentro de las tarjetas */
+  .about-card ul {
+    text-align: left;
+    padding-left: 1rem;
+    color: #4a5568;
+    line-height: 1.6;
+  }
+  
+  /* Animaciones de entrada */
+  .about-card[data-aos] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+  }
+  
+  [data-aos].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  

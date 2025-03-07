@@ -1,0 +1,49 @@
+/* ===== Estilos mejorados para el carrusel de testimonios ===== */
+
+/* Contenedor principal */
+.testimonials-section {
+    background-color: #f7fafc;
+    padding: 5rem 0;
+  }
+  
+  /* Título de la sección */
+  .testimonials-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Carrusel Swiper */
+  .mySwiper {
+    overflow: hidden;
+    padding-bottom: 2rem;
+  }
+  
+  /* Testimonio individual */
+  .swiper-slide {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .swiper-slide:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Texto del testimonio */
+  .swiper-slide p {
+    font-size: 1.1rem;
+    color: #4a5568;
+    font-style: italic;
+    line-height: 1.6;
+  }
+  
+  /* Autor del testimonio */
+  .swiper-slide p:last-child {
+    font-weight: bold;
+    color: var(--secondary);
+    margin-top: 1rem;
+  }
